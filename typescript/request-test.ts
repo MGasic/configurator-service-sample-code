@@ -1,4 +1,4 @@
-import { HttpClient } from './http-client';
+import { HttpClient } from './client/http-client';
 import * as fs from 'fs';
 
 async function request(payload) {
@@ -31,7 +31,7 @@ async function request(payload) {
 	/*
 	 * Example 2. Set Attribute value
 	 */
-	const attributeRef = 'User_Input_0';
+	const attributeRef = 'Required_User_Input_0';
 	const newAttributeValue = 'New value';
 	const existingConfigurationPayload = {
 		'configurationData': JSON.stringify(newConfigurationResult.model),
@@ -49,7 +49,7 @@ async function request(payload) {
 	 */
 	const payload = {
 		'configurationId': 'a0e1t000000EoX3AAK',
-		'script': fs.readFileSync(`${__dirname}/script-example.js`, 'utf8'),
+		'script': fs.readFileSync(`${__dirname}/examples/script-example.js`, 'utf8'),
 		'persistConfiguration': true
 	};
 

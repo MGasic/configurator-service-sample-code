@@ -1,14 +1,12 @@
 import * as https from 'https';
 import { ClientRequest } from 'http';
-import ServiceSettings from './config/service-settings';
+import ServiceSettings from '../config/service-settings';
 
 // Use only one signing method
-
 // RSA strategy
-import { RsaSignService } from './security/rsa-sign-service';
-
+import { RsaSignService } from '../security/rsa-sign-service';
 // Shared secret strategy
-// import { SharedSecretSignService } from './shared-secret-sign-service';
+// import { SharedSecretSignService } from './security/shared-secret-sign-service';
 
 export namespace HttpClient {
 
